@@ -1,0 +1,128 @@
+﻿@model TvVM
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel=”canonical” href=”https://woodacademy.az/“ />
+    <meta name="description" content="Mükəmməl keyfiyyətli xidmət və münasib məhsul qiymətlərini bir arada sizlərə təqdim etmək üçün çalışırıq.">
+    <meta name="author" content="Devcrud">
+    <title>Wood Academy</title>
+
+    <link rel="icon" type="image/x-icon" href="~/assets/imgs/wood1.jpg">
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+
+    <!-- Bootstrap + Creative Design main styles -->
+    <link rel="stylesheet" href="assets/css/creative-design.css">
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav id="scrollspy" class="navbar page-navbar navbar-light navbar-expand-md fixed-top" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="navbar-brand" href="#"><strong class="text-primary">Wood</strong> <span class="text-dark">Academy</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">Əsas Səhifə</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">Haqqımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">Layihələr</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">Partnyorlar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-controller="Home" asp-action="Index">Əlaqə</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav><!-- End of Page Navbar -->
+    <!-- Page Header -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content">
+            @*<h6>Wood Academy</h6>*@
+        </div>
+
+    </header><!-- End of Page Header -->
+
+    <br />
+    <div class="container">
+        <div class="d-flex flex-row gap-2 flex-wrap">
+            @foreach (TvImages item in Model.images)
+            {
+                <div class="col-sm-12 col-md-6 col-12 mb-5">
+                    <img src="/assets/imgs/Tv/@item.ImagePath" alt="" class="img-thumbnail" height="400px" width="400px">
+                </div>
+            }
+            
+        </div>
+    </div>
+
+    <!-- Section -->
+    <section class="pb-0">
+        <!-- Container -->
+        <div class="container">
+            <!-- Pre footer -->
+            <div class="pre-footer">
+                <ul class="list">
+                    <li class="list-head">
+                        <h5 class="font-weight-bold">Haqqımızda</h5>
+                    </li>
+                    <li class="list-body">
+                        <p>Müəssisə olaraq əsas dəyərlərimiz  keyfiyyət və etibarlılığın ən yüksək dərəcəsini təklif etməkdir. </p>
+                        <a href="#"><strong class="text-primary">Wood</strong> <span class="text-dark">Academy</span></a>
+                    </li>
+                </ul>
+
+                <ul class="list">
+                    <li class="list-head">
+                        <h5 class="font-weight-bold">Əlaqə</h5>
+                    </li>
+                    <li class="list-body">
+                        <p><i class="ti-location-pin"></i> Xocalı pr. 85, AZ1025 Bakı, Azərbaycan</p>
+                        <p><i class="ti-email"></i> wood.academyy@gmail.com</p>
+                        <p><i class="ti-mobile"></i>Tel:+994 55 734 25 71</p>
+                        <p><i class="ti-mobile"></i>Tel:+994 55 734 25 71</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61552555116171&mibextid=ZbWKwL" rel="nofollow" class="link"><i class="ti-facebook"></i></a>
+
+                            <a href="https://www.instagram.com/wood.academy_/?utm_source=ig_web_button_share_sheet&igshid=ZDNlZDc0MzIxNw==" rel="nofollow" class="link"><i class="ti-instagram"></i></a>
+
+                        </div>
+                    </li>
+                </ul>
+            </div><!-- End of Pre footer -->
+            <!-- foooter -->
+
+
+        </div><!--End of Container -->
+    </section><!-- End of Section -->
+    <!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Creative Design js -->
+    <script src="assets/js/creative-design.js"></script>
+
+</body>
+</html>
+
